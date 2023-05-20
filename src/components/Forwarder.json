@@ -1,0 +1,161 @@
+{"ABI": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "from",
+          "type": "address"
+        }
+      ],
+      "name": "getNonce",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "forwardRequest",
+          "type": "tuple"
+        },
+        {
+          "name": "domainSeparator",
+          "type": "bytes32"
+        },
+        {
+          "name": "requestTypeHash",
+          "type": "bytes32"
+        },
+        {
+          "name": "suffixData",
+          "type": "bytes"
+        },
+        {
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "forwardRequest",
+          "type": "tuple"
+        },
+        {
+          "name": "domainSeparator",
+          "type": "bytes32"
+        },
+        {
+          "name": "requestTypeHash",
+          "type": "bytes32"
+        },
+        {
+          "name": "suffixData",
+          "type": "bytes"
+        },
+        {
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "execute",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        },
+        {
+          "name": "ret",
+          "type": "bytes"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "typeName",
+          "type": "string"
+        },
+        {
+          "name": "typeSuffix",
+          "type": "string"
+        }
+      ],
+      "name": "registerRequestType",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "version",
+          "type": "string"
+        }
+      ],
+      "name": "registerDomainSeparator",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "domainSeparator",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "domainValue",
+          "type": "bytes"
+        }
+      ],
+      "name": "DomainRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "typeHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "typeStr",
+          "type": "string"
+        }
+      ],
+      "name": "RequestTypeRegistered",
+      "type": "event"
+    }
+  ]
+}

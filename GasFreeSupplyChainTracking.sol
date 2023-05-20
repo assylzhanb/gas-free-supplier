@@ -94,8 +94,6 @@ contract GasFreeSupplyChainTracking is Context {
         return products[productId].exists;
     }
 
-    // Event to indicate product removal
+    // Indicate product removal
     event ProductRemoved(address indexed sender, uint256 productId);
-
-    // Other functions and logic for supply chain management can be added here
 }
